@@ -1,5 +1,19 @@
 const searchIndexes = require("./search-indexes");
 
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-garden`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/garden`,
+        rootNote: `/garden/About-these-notes`,
+        contentPath: `/content/garden`,
+      },
+    },
+  ],
+};
+
 module.exports = (options) => {
   const {
     mdxOtherwiseConfigured = false,
@@ -13,9 +27,9 @@ module.exports = (options) => {
 
   return {
     siteMetadata: {
-      title: `Digital Garden Title Placeholder`,
-      description: `Description placeholder`,
-      siteUrl: `http://example.com/`,
+      title: `Brock Butler`,
+      description: `Digital Garden`,
+      siteUrl: `http://brockbutler.com/`,
     },
     plugins: [
       !mdxOtherwiseConfigured && `gatsby-plugin-sharp`,
